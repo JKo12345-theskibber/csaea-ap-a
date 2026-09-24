@@ -8,7 +8,7 @@ public class Song {
     private String genre;
     private boolean isExplicit;
     private int plays;
-   
+
     // constructor
     public Song(String title, String artist, int lengthInSeconds) {
         this.title = title;
