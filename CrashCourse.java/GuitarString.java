@@ -1,13 +1,13 @@
 public class GuitarString {
-    // Instance variables
-    private String note;                // String
+    // variables-strongly typed
+    private String note;                // string
     private int stringNumber;           // int
     private double frequency;           // double
     private boolean isBroken;           // boolean
     private double tensionLevel;        // double
     private String material;            // String
     
-    // Constructor
+    // constructor
     public GuitarString(String note, int stringNumber, String material, boolean isBroken) {
         this.note = note;
         this.stringNumber = stringNumber;
@@ -17,33 +17,33 @@ public class GuitarString {
         this.tensionLevel = 100.0;
     }
     
-    // Method 1: Tuning the string (changes attribute)
+    // method 1: tuning the string-changes attribute
     public void tuneString(double targetFrequency) {
         if (targetFrequency > 0) {
             frequency = targetFrequency;
-            System.out.println("String " + stringNumber + " tuned to " + frequency + " Hz");
+            System.out.println("string " + stringNumber + " tuned to " + frequency + " Hz");
         } else {
-            System.out.println("Frequency must be positive.");
+            System.out.println("frequency must be positive");
         }
     }
     
-    // Method 2: Adjust tension (changes attribute, takes parameter)
+    // method 2: adjust tension-changes attribute/ takes parameter
     public void adjustTension(double amount) {
         if (!isBroken) {
             tensionLevel += amount;
             if (tensionLevel > 150.0) {
                 tensionLevel = 150.0;
-                System.out.println("Warning: String at maximum safe tension!");
+                System.out.println("warning:string at maximum safe tension");
             } else if (tensionLevel < 50.0) {
                 tensionLevel = 50.0;
-                System.out.println("Warning: String tension too low!");
+                System.out.println("warning:string tension low");
             }
         } else {
-            System.out.println("Cannot adjust tension on a broken string.");
+            System.out.println("cannot adjust tension on a broken string");
         }
     }
     
-    // Method 3: Play the string (uses attributes)
+    // method 3: play the string-uses attributes
     public void playString() {
         if (!isBroken && frequency > 0) {
             System.out.println("Playing " + note + " on string " + stringNumber + " at " + frequency + " Hz");
@@ -54,7 +54,7 @@ public class GuitarString {
         }
     }
     
-    // Method 4: Break or repair string (changes attribute, takes parameter, compound condition)
+    // method 4: break or repair string-changes attribute, takes parameter, compound condition
     public void setStringCondition(boolean broken) {
         if (!broken && isBroken) {
             isBroken = false;
@@ -70,7 +70,7 @@ public class GuitarString {
         }
     }
     
-    // Method 5: Calculate sound quality (uses attributes)
+    // method 5: calculate sound quality-uses attributes
     public double calculateQuality() {
         if (isBroken) {
             return 0.0;
@@ -83,7 +83,7 @@ public class GuitarString {
         }
     }
     
-    // Method 6: Print current state (concatenation)
+    // method 6: print current state-concatenation
     public void printStringState() {
         System.out.println("String " + stringNumber + ": " + note);
         System.out.println("Frequency: " + frequency + " Hz");
@@ -94,16 +94,16 @@ public class GuitarString {
         System.out.println("---");
     }
     
-    // Method 7: Get string info (uses attributes)
+    // method 7: get string info-uses attributes
     public String getInfo() {
         if (isBroken) {
-            return "String " + stringNumber + " (" + note + ") - BROKEN";
+            return "String " + stringNumber + " (" + note + ") - broken";
         } else {
             return "String " + stringNumber + " (" + note + ") - " + material;
         }
     }
     
-    // Getter methods
+    // getter methods
     public int getStringNumber() {
         return stringNumber;
     }
