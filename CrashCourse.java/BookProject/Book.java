@@ -1,5 +1,5 @@
 public class Book {
-    // my 4 private variables
+    // 4 private variables
     private String title;
     private int pages;
     private double price;
