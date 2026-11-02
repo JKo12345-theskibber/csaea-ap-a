@@ -2,7 +2,7 @@ public class BookTester {
     public static void main(String[] args) {
         Book b1 = new Book("harry potter", 300, 15.0, true);
         Book b2 = new Book(dune", 600, 12.0, false);
-        Book b3 = new Book("harry Potter", 300, 15.0, false);
+        Book b3 = new Book("harry potter", 300, 15.0, false);
 
         // toString
         System.out.println("toString");
