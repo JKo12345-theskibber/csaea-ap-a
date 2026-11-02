@@ -1,41 +1,41 @@
 public class BookTester {
     public static void main(String[] args) {
-        Book b1 = new Book("Harry Potter", 300, 15.0, true);
-        Book b2 = new Book("Dune", 600, 12.0, false);
-        Book b3 = new Book("Harry Potter", 300, 15.0, false);
+        Book b1 = new Book("harry potter", 300, 15.0, true);
+        Book b2 = new Book(dune", 600, 12.0, false);
+        Book b3 = new Book("harry Potter", 300, 15.0, false);
 
         // toString
         System.out.println("toString");
-        System.out.println("expected: Harry Potter (300 pages, $15.0, Hardcover)");
+        System.out.println("expected: harry Potter (300 pages, $15.0, Hardcover)");
         System.out.println("got: " + b1.toString());
         System.out.println();
 
         // printInfo
         System.out.println("printInfo");
-        System.out.println("expected: Dune (600 pages, $12.0, Paperback)");
+        System.out.println("expected: dune (600 pages, $12.0, Paperback)");
         System.out.print("got: ");
         b2.printInfo();
         System.out.println();
 
         // containsWord
         System.out.println("containsWord true");
-        System.out.println("expected: true, got: " + b1.containsWord("Potter"));
+        System.out.println("expected: true, got: " + b1.containsWord("potter"));
         System.out.println("containsWord false");
-        System.out.println("expected: false, got: " + b1.containsWord("Dune"));
+        System.out.println("expected: false, got: " + b1.containsWord("dune"));
         System.out.println();
 
         // getFirstWord
         System.out.println("getFirstWord with a space");
-        System.out.println("expected: Harry, got: " + b1.getFirstWord());
+        System.out.println("expected: harry, got: " + b1.getFirstWord());
         System.out.println("getFirstWord no space");
-        System.out.println("expected: Dune, got: " + b2.getFirstWord());
+        System.out.println("expected: dune, got: " + b2.getFirstWord());
         System.out.println();
 
         // startsLike
         System.out.println("startsLike true");
-        System.out.println("expected: true, got: " + b1.startsLike("Harvest"));
+        System.out.println("expected: true, got: " + b1.startsLike("harvest"));
         System.out.println("startsLike false");
-        System.out.println("expected: false, got: " + b2.startsLike("Harvest"));
+        System.out.println("expected: false, got: " + b2.startsLike("harvest"));
         System.out.println();
 
         // sameTitle
